@@ -1,0 +1,27 @@
+(Codigos no Terminal do projeto)
+
+npx create-react-app nome-projeto ||| Criação Projeto React 
+
+npm start  ||| Abrir aba do site
+
+
+(App.js)
+
+function App() {return(HTMLcodes)} ||| Tudo dentro desse return é o que vai ser exibido de fato
+
+<div className="App"> conteudo </div> Div principal do HTML, tudo que for dele tem que estar dentro dela
+
+HTML 
+
+-classes closed como: <input>, <img>  tem que ficar assim <input/>
+
+classes no html aqui são atribuidas como: className="nome_classe"
+
+{conteudo JavaScript} ||| Exibição de conteudos Javascript mesmo, como valor de variaveis,Retorno de Funçoes, logica 2+1 etc
+
+
+
+
+
+
+
