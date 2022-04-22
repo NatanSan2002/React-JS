@@ -1,8 +1,10 @@
+import estilo from "./styles/Frase.module.css";
+
 function Frase () {
 
 return(
-<div>
-<p>Este é um Componente que emite <strong> Frases</strong></p>
+<div className={estilo.fraseContainer}>
+<p className={estilo.fraseContent}>Este é um Componente que emite <strong> Frases</strong></p>
 </div>
 
 )

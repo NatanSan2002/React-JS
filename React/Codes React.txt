@@ -2,36 +2,19 @@
 
 npx create-react-app nome-projeto ||| Criação Projeto React 
 
-npm start  ||| Abrir aba do site
+npm start  ||| Abrir aba do site (tem que ser dado dentro da pasta principal do projeto, onde estão todas as pastas e arquivos)
 
 
-(App.js)
+App.js
 
-import  Nome_Da_Importação  from  "localização_do_componente.formato" ||| Importação de Componentes para serem usados 
+function App() {return(HTMLcodes)} ||| Tudo dentro desse return do "App.js" é o que vai ser exibido de fato
 
-*A Busca de arquivos no React é feita em Linux, por isso deve se especificar por exemplo se a pasta/arquivo esta na mesma pasta 
-
-em que a busca esta sendo feita, colocando: ./  exemplo: ./pasta_mesmo_local/arquivo.formato  *
-
-<Nome_Da_Importação/> ||| Utilização De Importação feita no arquivo que a importou.
-
-
-Para criar um Componente(Um arquivo diferente com codigos próprios)  basta criar um arquivo.formato (exemplo .js)
-
-e dentro dele seus codigos, como em JS, declarar funçoes e exporta-las usando: export default NomeFunção;   no final do codigo do componente
-
-
-*Para Criar conteudo para HTML dentro de uma função JS usa-se a base JSX, assim, dentro dela basta criar um return( <div>conteudos HTML</div>)*
+<div className="App"> conteudo </div> Div principal do HTML do "App.js", tudo que for dele tem que estar dentro dessa div principal
 
 
 
 
 
-
-
-function App() {return(HTMLcodes)} ||| Tudo dentro desse return é o que vai ser exibido de fato
-
-<div className="App"> conteudo </div> Div principal do HTML, tudo que for dele tem que estar dentro dessa div principal
 
 HTML 
 
@@ -39,7 +22,66 @@ HTML
 
 classes no html aqui são atribuidas como: className="nome_classe"
 
-{conteudo JavaScript} ||| Exibição de conteudos Javascript no HTML, como valor de variaveis,Retorno de Funçoes, logica 2+1 etc
+{conteudo JavaScript} ||| Exibição de conteudos Javascript dentro do HTML, como valor de variaveis,Retorno de Funçoes, logica 2+1 etc
+
+
+
+
+
+CSS
+
+arquivo "index.css" é o arquivo que por padrão é importado pelo "index.js", assim ele é o arquivo de CSS default que sera aplicado em todos os Componentes do projeto.
+
+import Nome_Da_ImportaçãoCSS from "Localização_do_arquivo.css" ||| Importação De estilo CSS para um Componente, que aonde for utilizado ira usar esse estilo importado
+
+<tag className={Nome_Da_ImportaçãoCSS.nomeclass}> </tag> ||| Atribuindo Estilos Da Importação CSS para Elementos Do Componente. (Nesse caso uma Classe)   
+
+
+
+
+
+
+
+JAVACRIPT 
+
+import  Nome_Da_Importação  from  "localização_do_componente.formato" ||| Importação de Componentes para serem usados nesse arquivo 
+
+*A Busca de arquivos no React é feita em Linux, por isso deve se especificar por exemplo se a pasta/arquivo esta na mesma pasta 
+
+em que a busca esta sendo feita, colocando: ./  exemplo: ./pasta_mesmo_local/arquivo.formato  *
+
+<Nome_Da_Importação/> ||| Utilização De Importação no HTML feita no arquivo que a importou.
+
+
+Para criar um Componente(Um arquivo diferente com codigos próprios)  basta criar um arquivo.formato (exemplo .js)
+
+e dentro dele seus codigos, como em JS, declarar funçoes e exporta-las usando: export default NomeFunção;   no final do codigo do componente
+
+assim, quando outro Componente(arquivo) Importar esse Componente de FunçoesJS, ele tera acesso as Funçoes que foram exportadas 
+
+
+
+Functions
+
+Para Criar conteudo para HTML dentro de uma função JS usa-se a base JSX, assim, dentro dela basta criar um return( <div>conteudos HTML</div>)
+
+
+function nomeF(propriedades) {return (<div> propriedades.valor1   propriedades.valor2 </div>)}  ||| Declarando Funçoes com Propriedades, Sendo Dinamicas com seus valores definidos em cada utilização.
+
+*não esquecer de exporta-la e importala no documento antes*
+
+<nomeF valor1= conteudo1    valor2= conteudo2 />  ||| Utilizando Funçoes com Propriedades, Método de Atribuição de valor para uma propriedade Definida na Function.
+
+
+function nomeF( { valor1, valor2, valor3 } ) {return (<div> valor1 valor2 valor3  </div>)}  ||| Método Simplificado Para Declaração de Propriedades
+
+
+
+
+
+
+
+
 
 
 

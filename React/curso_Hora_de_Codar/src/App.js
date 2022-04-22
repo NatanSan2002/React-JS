@@ -1,24 +1,28 @@
 import './App.css'; 
-import HWorld from "./components/HelloWorld.js";
-import Fraze from "./components/Frase";
+import SayName from "./components/SayMyName.js";
+import Pessoa from "./components/Pessoa.js";
+import Frase from "./components/Frase.js"
+
+
 
 function App() {
- const nome = "Natan";
- const test = "Gomes";
- function sum (n1,n2){return n1+n2}
+ 
 
- const img = "https://via.placeholder.com/150";
 
   return (
-    <div>
-      <h1>Ola React, Eis me aqui!</h1>
-      <p>Vamos começar a estudar {nome+" "+test}</p>
-      <p>Retorno da Func: {sum(2,3)}</p>
-      Imagem:<br></br>
-      <img src={img} alt="Imagem Teste"/>
-      <p>Componente Chamado: </p><HWorld/>
-      <p> Outros Componentes Chamados: </p><Fraze/>
-      <Fraze/>
+    <div className="App">
+      <p>Componente SayMyName:</p>
+      <SayName nome="N4T4N"/>
+      <SayName nome="Joao"/>
+      <br>
+      </br>
+      <p>Componente Pessoa</p>
+      <Pessoa nome="Roberto" idade="25" profissao="Limpador de Vidros" foto="https://observatoriodocinema.uol.com.br/wp-content/uploads/2022/01/goku.jpeg"/>
+
+      <p>Componente Frase</p>
+      <Frase />
+     
+      
     </div>
   );
 }
