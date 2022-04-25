@@ -61,9 +61,18 @@ assim, quando outro Componente(arquivo) Importar esse Componente de FunçoesJS, 
 
 
 
-Functions
+
+
+FUNCTIONS
 
 Para Criar conteudo para HTML dentro de uma função JS usa-se a base JSX, assim, dentro dela basta criar um return( <div>conteudos HTML</div>)
+
+* pode substituir essas <div> </div> pai dentro do return() por:   <> conteudos HTML  </>  ||| Utilizado para não poluir o codigo com muitas Divs em conteudos desnecessarios * 
+
+
+
+
+Props
 
 
 function nomeF(propriedades) {return (<div> propriedades.valor1   propriedades.valor2 </div>)}  ||| Declarando Funçoes com Propriedades, Sendo Dinamicas com seus valores definidos em cada utilização.
@@ -74,6 +83,39 @@ function nomeF(propriedades) {return (<div> propriedades.valor1   propriedades.v
 
 
 function nomeF( { valor1, valor2, valor3 } ) {return (<div> valor1 valor2 valor3  </div>)}  ||| Método Simplificado Para Declaração de Propriedades
+
+
+
+Validando os Tipos de Props 
+
+import  Nome_Importacao  from "prop-types"   ||| Importando Componente:  prop-types, padrão do React para Validação de Props de uma função. (não precisa especificar a localização direito???)
+
+* Tem que importar no Componente que tem a função que vai ter as props validadas*
+
+*daqui pra frente Nome_Importacao vai ser considerada como:  NPT
+
+nomeFuncao.propTypes = { valor1: NPT.tipo_primitivo , valor2: NPT.tipo_primitivo  }   ||| Objeto para Validação dos tipos das Props da Função
+
+* nomeFuncao.propTypes  esse "p" do prop Types tem que ser minusculo*  * tipo primitivo é  number, string, etc...  * 
+  
+nomeFuncao.propTypes = { valor1: NPT.tipo_primitivo.isRequired  }  ||| atributo IsRequired pra Prop, indica que é um valor Necessario, não podendo ficar vazio
+
+
+*Aliais para colocar cadeias de atributos para a mesma prop basta colocar:  NPT.atributo1.atributo2.atributo3   e assim por diante*
+
+
+NomeFuncao.defaultProps =  { valor1: conteudo, valor2: conteudo}   ||| Valores Dafaults para as Props, Se A Prop Não receber nenhum valor ,então ela ira receber esses ja definidos.
+
+
+
+Eventos
+
+function EventoN () {Execuçoes do Evento};  <button onClick= {EventoN} > botão  </button>  ||| Chamando uma Função de Evento em um Onlick
+
+
+
+
+
 
 
 

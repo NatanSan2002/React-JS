@@ -1,7 +1,7 @@
 import './App.css'; 
-import SayName from "./components/SayMyName.js";
-import Pessoa from "./components/Pessoa.js";
-import Frase from "./components/Frase.js"
+import Evento from "./components/Evento.js";
+import Formulario from "./components/Form.js";
+
 
 
 
@@ -11,17 +11,12 @@ function App() {
 
   return (
     <div className="App">
-      <p>Componente SayMyName:</p>
-      <SayName nome="N4T4N"/>
-      <SayName nome="Joao"/>
-      <br>
-      </br>
-      <p>Componente Pessoa</p>
-      <Pessoa nome="Roberto" idade="25" profissao="Limpador de Vidros" foto="https://observatoriodocinema.uol.com.br/wp-content/uploads/2022/01/goku.jpeg"/>
+      <h1> Testando Eventos</h1>
+      <Evento/>
 
-      <p>Componente Frase</p>
-      <Frase />
-     
+      <p>Componente: Formulario (Evento)</p>
+      <Formulario/>
+
       
     </div>
   );
