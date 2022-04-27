@@ -113,6 +113,12 @@ Eventos
 function EventoN () {Execuçoes do Evento};  <button onClick= {EventoN} > botão  </button>  ||| Chamando uma Função de Evento em um Onlick
 
 
+functionN (e) {e.preventDefault( )} ||| Cancela Açoes tipo SUBMIT, permanecendo na pag e continuando codigos da Função 
+
+* "e" do parametro pode ser dado qualquer nome
+
+
+
 
 
 
