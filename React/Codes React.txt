@@ -81,8 +81,10 @@ function nomeF(propriedades) {return (<div> propriedades.valor1   propriedades.v
 
 <nomeF valor1= conteudo1    valor2= conteudo2 />  ||| Utilizando Funçoes com Propriedades, Método de Atribuição de valor para uma propriedade Definida na Function.
 
+* lembrando que se for receber um conteudo de JS dentro de um HTML colocar = {} o conteudo JS
 
-function nomeF( { valor1, valor2, valor3 } ) {return (<div> valor1 valor2 valor3  </div>)}  ||| Método Simplificado Para Declaração de Propriedades
+
+function nomeF( { valor1, valor2, valor3 } ) {return (<div> {valor1} {valor2} {valor3}  </div>)}  ||| Método Simplificado Para Declaração de Propriedades
 
 
 
@@ -116,6 +118,47 @@ function EventoN () {Execuçoes do Evento};  <button onClick= {EventoN} > botão
 functionN (e) {e.preventDefault( )} ||| Cancela Açoes tipo SUBMIT, permanecendo na pag e continuando codigos da Função 
 
 * "e" do parametro pode ser dado qualquer nome
+
+
+
+
+HOOKs
+
+import {Nome_Hook} from "localização" ||| Importando Hooks para o Componente
+
+* Diferente de importar Componentes, a importação de Hooks não pode ser posta com qualquer nome, tendo que ser seu nome Original de fato*
+
+
+UseState
+
+import {useState} from "react" ||| Importando Hook useState, serve para mudar valor de uma variavel em tal momento 
+
+const [var, Setvar] = useState() ||| Criando consts para o useState
+
+* poderia colocar dentro do (parametro) do useState ja um valor para ficar como default das consts * 
+
+* esse método de declaração cria duas constantes com o mesmo conteudo ( useState() ), para depois quando uma tiver seu valor 
+trocado como a (Setvar) tambem mudar o valor da outra (var), essa outra sendo a responsavel pela utilização desse valor em algum lugar. (Ambas podem ter qualquer nome )*
+
+
+<input onChange = { (e) => Setvar(e.target.value) }  />          |||    Usando Hook useState 
+
+* nesse exemplo com onChange em um input, toda vez que o campo input sofrer qualquer   
+alteração o onChange com useState é disparado, fazendo aquela const "Setvar" de useState pegar o valor e ja atribui a outra var 
+"gemea " onde armazena e sera utlizida o valor de fato. * 
+
+*(e) do parametro da Arrow Function pode ser substituido por qualquer nome*       
+
+                                
+
+
+
+
+
+
+
+
+ 
 
 
 

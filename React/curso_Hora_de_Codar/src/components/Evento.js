@@ -1,8 +1,14 @@
+import Button from "./evento/Button.js"
+
 function Evento() {
 
 function meuEvento() {
-console.log( `Evento do Botao foi Ativado com sucesso!!!`);
+console.log( `Activaded Firts Event`);
 };
+
+function Evento2() {
+console.log(`Activaded Second Evento`)
+}
 
 
 
@@ -10,7 +16,9 @@ console.log( `Evento do Botao foi Ativado com sucesso!!!`);
 return(
 <div>
 <p> Click Here for Activaded A Event</p>
-<input type="button" onClick={meuEvento} value="Click Aqui!!!" />
+<Button event={meuEvento} text="Primeiro Botão"/>
+<Button event={Evento2} text="Segundo Botão"/>
+
 </div>
 )    
 }
