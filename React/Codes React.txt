@@ -138,7 +138,8 @@ const [var, Setvar] = useState() ||| Criando consts para o useState
 * poderia colocar dentro do (parametro) do useState ja um valor para ficar como default das consts * 
 
 * esse método de declaração cria duas constantes com o mesmo conteudo ( useState() ), para depois quando uma tiver seu valor 
-trocado como a (Setvar) tambem mudar o valor da outra (var), essa outra sendo a responsavel pela utilização desse valor em algum lugar. (Ambas podem ter qualquer nome )*
+trocado como a (Setvar) tambem mudar o valor da outra (var), essa outra sendo a responsavel pela utilização desse valor em algum lugar, 
+não podendo ser alterada diretamente nela(como uma const mesmo). (Ambas podem ter qualquer nome )*
 
 
 <input onChange = { (e) => Setvar(e.target.value) }  />          |||    Usando Hook useState 
@@ -147,10 +148,21 @@ trocado como a (Setvar) tambem mudar o valor da outra (var), essa outra sendo a 
 alteração o onChange com useState é disparado, fazendo aquela const "Setvar" de useState pegar o valor e ja atribui a outra var 
 "gemea " onde armazena e sera utlizida o valor de fato. * 
 
-*(e) do parametro da Arrow Function pode ser substituido por qualquer nome*       
+*(e) do parametro da Arrow Function pode ser substituido por qualquer nome*     
 
+
+
+
+Condicional
+
+var &&  (comandos)  ||| Condicional que verifica se tal Var tem algum valor guardado, se tiver executa os codigos dentro do (parenteses)
+
+
+
+var  >  2 ?   ( comandos se verdadeira )  : (comandos se falsa )  ||| Se a Condição para a Var for Verdadeira executa os codigos do  (1parenteses) 
+                                                                                                                  Se a condição for falsa então executa os comandos do (2parenteses)
                                 
-
+*É obrigatorio ter o (segundo parenteses) de condição falsa*
 
 
 
