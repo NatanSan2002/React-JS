@@ -1,28 +1,51 @@
-import './App.css'; 
-import OutraLista from './components/OutraLista';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Home from "./pages/Home.js";
+import Empresa from "./pages/Empresa.js";
+import Contato from "./pages/Contato.js";
 
 
-const MyItens = ["React","Vue", "Angular"];
-const Itens2 = [];
+
+
 
 
 
 function App() {
- 
+ return (
+<Router>
 
 
-  return (
-    <div className="App">
-     <p>Componente: (Outra) Lista </p>
-     <OutraLista itens={MyItens} />
-     <p> Lista Vazia:</p>
-     <OutraLista itens={Itens2}/>
-     
-    
+<ul>
+<li>
+  <Link to="/">Home</Link>
+  </li>
+  <li>
+  <Link to="/empresa"> Empresa</Link>
+  </li>
+  <li>
+   <Link to ="/contato">Contato</Link>  
+  </li>
+</ul>
 
-      
-    </div>
-  );
+
+
+<Routes>
+<Route exact path="/"> 
+<Home /> 
+</Route>
+<Route path="/empresa"> 
+<Empresa /> 
+</Route>
+<Route path="/contato"> 
+<Contato /> 
+</Route>
+</Routes>
+
+
+</Router>
+
+ )
+
+
 }
 
 export default App;

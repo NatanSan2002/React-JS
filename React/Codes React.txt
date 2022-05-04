@@ -148,8 +148,29 @@ não podendo ser alterada diretamente nela(como uma const mesmo). (Ambas podem t
 alteração o onChange com useState é disparado, fazendo aquela const "Setvar" de useState pegar o valor e ja atribui a outra var 
 "gemea " onde armazena e sera utlizida o valor de fato. * 
 
-*(e) do parametro da Arrow Function pode ser substituido por qualquer nome*     
+*(e) do parametro da Arrow Function pode ser substituido por qualquer nome*    
 
+
+
+
+* State Lift 
+
+Também é possivel criar um componente que apenas pega e envia o valor para a var de UseStage porem que ele não vai ficar limitado a ele
+pois sua declaração  const [var,useVar] = useStage()   estará em outro Componente, que utilizará esses valores em muitos outros Lugares.
+
+- Basta cria esse Componente responsavel pela pega e envio do valor para o useStage com uma props para o useStage de outros Componentes,
+que ficara onde a useVar do userStage ficaria:  Onchange={PropUseStage} etc...
+Então , no Componente das consts declaradas do useStage passe esse Componente de pega e envio dando o useStage em questão para aquela props:
+
+const [var,useVar] = useStage();
+
+<Componente PropUseStage={useVar} />
+
+- Então esse valor dessas consts do useStage ficaram disponiveis para serem usadas em todo esse Componente Principal
+e não apenas naquele Componente que pegou e enviou os valores para ela.
+
+*
+ 
 
 
 
@@ -163,6 +184,18 @@ var  >  2 ?   ( comandos se verdadeira )  : (comandos se falsa )  ||| Se a Condi
                                                                                                                   Se a condição for falsa então executa os comandos do (2parenteses)
                                 
 *É obrigatorio ter o (segundo parenteses) de condição falsa*
+
+
+
+
+
+React Router 
+
+npm install react-router-dom    |||   (No Terminal principal da aplicação) Instalando o pacote
+
+import    { BrowserRouter as Router, Routes, Route, Link }   from 'react-router-dom'    |||  Principais Importaçoes no Componente para o React Router
+
+
 
 
 
