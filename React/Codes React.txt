@@ -189,11 +189,39 @@ var  >  2 ?   ( comandos se verdadeira )  : (comandos se falsa )  ||| Se a Condi
 
 
 
-React Router 
+React Router ||| Ferramenta que serve como Link para outras paginas mesmo, porem só trocando partes especificas da visualização e com isso o URL tambem 
+
 
 npm install react-router-dom    |||   (No Terminal principal da aplicação) Instalando o pacote
 
 import    { BrowserRouter as Router, Routes, Route, Link }   from 'react-router-dom'    |||  Principais Importaçoes no Componente para o React Router
+
+
+<Router> Codigos </Router>      ||| Tag Principal do Router, onde ficara todos os seus Componentes especificos
+
+<p> <Link to="/nome_para_url " > Conteudo </Link> </p>  |||  Link com nome de Url que sera usado pela tag Router depois
+
+
+* Geralmente usasse esses Links em listas mas como são links podem ser aclopados em qualquer tag e conteudo
+
+* tambem podem tranquilamente serem indexado a um Componente próprio, só não esqueça de importar o Componente Link também
+
+
+<Routes> <Route /> </Routes>  ||| Tag Routes, Onde ficaram as Tags Route dentro
+
+<Route path="/nome_da_url" element={<Nome_Componente/>}  /> ||| Tag Route, é a responsavel por pegar a url definida do Link (ali em cima) e Transferir para a pagina o Componente 
+
+
+* o nome_da_url tem que ser o mesmo da definida no Link *  
+
+* pagina padrão (inicial) geralmente é definida só com um "/" no path
+
+para evitar conflitor com outros usar o atributo:   exact  path="/"    nesse Link 
+
+* Não esqueça de Importar esse Componente que sera pego antes * 
+
+
+
 
 
 
