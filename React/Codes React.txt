@@ -1,8 +1,17 @@
-(Codigos no Terminal do projeto)
+Codigos no Terminal (na pasta principal do projeto, onde estão todas as pastas e arquivos)
 
-npx create-react-app nome-projeto ||| Criação Projeto React 
 
-npm start  ||| Abrir aba do site (tem que ser dado dentro da pasta principal do projeto, onde estão todas as pastas e arquivos)
+npx create-react-app nome-projeto       ||| Criação Projeto React  (nome do projeto tem que ser todo em minusculo)
+
+npm install json-server                            ||| Instalar Json Server, para simular o backend da aplicação
+
+npm install uuid                                       ||| Instalar uuid, serve para diferenciar por ID nossos projetos no banco de dados
+
+
+npm start      ||| Abrir aba do site pelo localhost
+
+
+
 
 
 App.js
@@ -23,6 +32,8 @@ HTML
 classes no html aqui são atribuidas como: className="nome_classe"
 
 {conteudo JavaScript} ||| Exibição de conteudos Javascript dentro do HTML, como valor de variaveis,Retorno de Funçoes, logica 2+1 etc
+
+*o html "puro" é o arquivo index.html na pasta public, ele que tem as configuraçoes de <head> para mudar o title ou importar fontes por HTML por exemplo
 
 
 
@@ -241,6 +252,11 @@ Import {Nome_do_Icon}  from "react-icons/nome_pasta_icons"     |||   Importando 
 
 
 https://react-icons.github.io/react-icons/   ||| Site com maiores informaçoes sobre endereços de Icones
+
+
+
+
+
 
 
 
