@@ -224,6 +224,30 @@ para evitar conflitor com outros usar o atributo:   exact  path="/"    nesse Lin
 
 
 
+React Icons      ||| Biblioteca de icones externas para o React
+
+
+
+npm install react-icons      ||| Instalando React Icons no projeto   (no Terminal, na pagina principal do projeto)
+
+
+Import {Nome_do_Icon}  from "react-icons/nome_pasta_icons"     |||   Importando Icons para o Componente
+
+
+*exemplo: import {FaFacebook, FaInstagram}  from "react-icons/fa" 
+
+*ai onde for utilizar só colocar o Nome,  <FaFacebook/> 
+
+
+
+https://react-icons.github.io/react-icons/   ||| Site com maiores informaçoes sobre endereços de Icones
+
+
+
+
+
+
+
 
 
 
