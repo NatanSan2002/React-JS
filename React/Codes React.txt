@@ -43,9 +43,20 @@ CSS
 
 arquivo "index.css" é o arquivo que por padrão é importado pelo "index.js", assim ele é o arquivo de CSS default que sera aplicado em todos os Componentes do projeto.
 
-import Nome_Da_ImportaçãoCSS from "Localização_do_arquivo.css" ||| Importação De estilo CSS para um Componente, que aonde for utilizado ira usar esse estilo importado
+import Nome_Da_ImportaçãoCSS from "Localização_do_arquivo.module.css" ||| Importação De estilo CSS para um Componente, que aonde for utilizado ira usar esse estilo importado
 
-<tag className={Nome_Da_ImportaçãoCSS.nomeclass}> </tag> ||| Atribuindo Estilos Da Importação CSS para Elementos Do Componente. (Nesse caso uma Classe)   
+*o .module no nome do arquivo pelo visto é obrigatorio para funcionar o estilo *
+
+<tag className={Nome_Da_ImportaçãoCSS.nomeclass}> </tag> ||| Atribuindo Estilos Da Importação CSS para Elementos Do Componente. (Nesse caso uma Classe) 
+
+
+className={`  ${importacaoCSS[props.ClasseDinamica]  } `}   ||| Método Para Pegar Estilos CSS Especificos para cada conteudo utilizando Props.  (usa `` esses aspas)
+
+*não esquecer de definir (Prop) nessa Function é obvio
+
+<Componente ClasseDinamica="nome_da_classe" />    ||| Definindo a Prop de Classe para esse Componente
+
+
 
 
 
@@ -61,7 +72,9 @@ import  Nome_Da_Importação  from  "localização_do_componente.formato" ||| Im
 
 em que a busca esta sendo feita, colocando: ./  exemplo: ./pasta_mesmo_local/arquivo.formato  *
 
-<Nome_Da_Importação/> ||| Utilização De Importação no HTML feita no arquivo que a importou.
+<Nome_Da_Importação/> ||| Utilização De Importação no HTML feita no arquivo que a importou (sintaxe resumida da tag).
+
+<Nome_Da_Importação>  Codigos HTML </Nome_Da_Importação>  ||| Utilização De Importaçao, sintaxe de tag obrigatorio quando outras tags html estarão dentro do Componente
 
 
 Para criar um Componente(Um arquivo diferente com codigos próprios)  basta criar um arquivo.formato (exemplo .js)
@@ -88,14 +101,14 @@ Props
 
 function nomeF(propriedades) {return (<div> propriedades.valor1   propriedades.valor2 </div>)}  ||| Declarando Funçoes com Propriedades, Sendo Dinamicas com seus valores definidos em cada utilização.
 
-*não esquecer de exporta-la e importala no documento antes*
-
 <nomeF valor1= conteudo1    valor2= conteudo2 />  ||| Utilizando Funçoes com Propriedades, Método de Atribuição de valor para uma propriedade Definida na Function.
 
 * lembrando que se for receber um conteudo de JS dentro de um HTML colocar = {} o conteudo JS
 
 
 function nomeF( { valor1, valor2, valor3 } ) {return (<div> {valor1} {valor2} {valor3}  </div>)}  ||| Método Simplificado Para Declaração de Propriedades
+
+function nomeF (props) { return (  <div>  props.children </div>  )}  ||| Props.Children, especifica que as Props definidas serão utilizadas em todas as Tags de dentro do Componente
 
 
 
@@ -210,15 +223,17 @@ import    { BrowserRouter as Router, Routes, Route, Link }   from 'react-router-
 
 <Router> Codigos </Router>      ||| Tag Principal do Router, onde ficara todos os seus Componentes especificos
 
-<p> <Link to="/nome_para_url " > Conteudo </Link> </p>  |||  Link com nome de Url que sera usado pela tag Router depois
+<Link to="/nome_para_url " > Conteudo </Link>  |||  Link com nome de Url que sera usado pela tag Router depois
 
 
-* Geralmente usasse esses Links em listas mas como são links podem ser aclopados em qualquer tag e conteudo
+* Geralmente usasse esses Links em tags listas mas como são links podem ser aclopados em qualquer tag e conteudo
 
 * tambem podem tranquilamente serem indexado a um Componente próprio, só não esqueça de importar o Componente Link também
 
 
-<Routes> <Route /> </Routes>  ||| Tag Routes, Onde ficaram as Tags Route dentro
+<Routes>     <Route />   </Routes>  ||| Tag Routes, Onde ficaram as Tags Route dentro
+
+* Geralmente coloca Componentes logo acima na herarquia dessa tag <Routes> não sendo igual ao antigo Switch 
 
 <Route path="/nome_da_url" element={<Nome_Componente/>}  /> ||| Tag Route, é a responsavel por pegar a url definida do Link (ali em cima) e Transferir para a pagina o Componente 
 
