@@ -45,7 +45,7 @@ arquivo "index.css" é o arquivo que por padrão é importado pelo "index.js", a
 
 import Nome_Da_ImportaçãoCSS from "Localização_do_arquivo.module.css" ||| Importação De estilo CSS para um Componente, que aonde for utilizado ira usar esse estilo importado
 
-*o .module no nome do arquivo pelo visto é obrigatorio para funcionar o estilo *
+*o  .module  no nome do arquivo CSS é obrigatorio para funcionar o estilo *
 
 <tag className={Nome_Da_ImportaçãoCSS.nomeclass}> </tag> ||| Atribuindo Estilos Da Importação CSS para Elementos Do Componente. (Nesse caso uma Classe) 
 
@@ -71,6 +71,8 @@ import  Nome_Da_Importação  from  "localização_do_componente.formato" ||| Im
 *A Busca de arquivos no React é feita em Linux, por isso deve se especificar por exemplo se a pasta/arquivo esta na mesma pasta 
 
 em que a busca esta sendo feita, colocando: ./  exemplo: ./pasta_mesmo_local/arquivo.formato  *
+
+* para voltar de diretorio colocar:  ../  *
 
 <Nome_Da_Importação/> ||| Utilização De Importação no HTML feita no arquivo que a importou (sintaxe resumida da tag).
 
@@ -263,6 +265,12 @@ Import {Nome_do_Icon}  from "react-icons/nome_pasta_icons"     |||   Importando 
 *exemplo: import {FaFacebook, FaInstagram}  from "react-icons/fa" 
 
 *ai onde for utilizar só colocar o Nome,  <FaFacebook/> 
+
+No CSS, para editar especificamente esses icons, é o svg  exemplo: svg{ configuraçoes de estilo css}
+
+svg {font-size:5px;} ||| Tamanho do Icone
+
+
 
 
 

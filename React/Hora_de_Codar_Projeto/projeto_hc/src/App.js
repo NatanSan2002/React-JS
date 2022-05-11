@@ -5,22 +5,21 @@ import Home from "./components/pages/Home";
 import Company from "./components/pages/Company";
 import Contact from "./components/pages/Contact";
 import NewProject from "./components/pages/NewProject";
+import Projects from "./components/Projects";
 
 import Container from "./components/pages/layout/Container.js";
+import NavBar from "./components/pages/layout/NavBar";
+import Footer from "./components/pages/layout/Footer";
 
 
 
 function App() {
   return (  
 <Router>
-<div>
-  <Link to="/">Home</Link>
-  <Link to="/contact">Contact</Link>
-  <Link to="/company">Company</Link>
-  <Link to="/newproject">Newproject</Link>
-  </div>
+<NavBar/>
  
  <Container customClass="min_height">
+   
 <Routes>
 <Route exact path="/" element={<Home/>}/>
 
@@ -29,11 +28,13 @@ function App() {
 <Route exact path="/contact" element={<Contact/>}/>
 
 <Route exact path="/newproject" element={<NewProject/>}/>
+
+<Route path="/projects" element={<Projects/>}/>
 </Routes>
 </Container>
 
 
-<p>Footer</p>
+<Footer/>
 
 </Router>
     
