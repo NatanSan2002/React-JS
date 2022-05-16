@@ -278,6 +278,47 @@ https://react-icons.github.io/react-icons/   ||| Site com maiores informaçoes s
 
 
 
+JSON ||| arquivos .json são arquivos de textos que contem informaçoes e dados, que aqui no React serão usados como banco de dados do backend
+
+*Criar arquivo.json na pasta principal do projeto (a mesma que tem as pastar "src", "public" etc)
+
+ geralmente com o nome de db, ficando  db.json *
+
+
+{conteudo do JSON} ||| essas chaves são as chaves principais de um arquivo.json 
+
+{"nome_conteudo": conteudo, "nome_conteudo2": conteudo2}   ||| dentro das chaves principais os conteudos são criados dessa maneira, podendo os conteudos serem tmb arrays ou objetos
+
+
+* no arquivo  package.json dentro dos objetos do "scripts", declarar mais um conteudo com o nome de "backend": "json-server --watch db.json --port 5000",
+
+assim habilitará a visualização concreta dos conteudos daquele arquivo db.json, na porta 5000 no caso. 
+
+depois no terminal dar o comando  npm run  backend   e acessar o link do localhost:numero_porta que foi gerado. *
+
+pegandos os conteudos do JSON em um componente
+
+fetch("http://localhost:numero_porta/nome_conteudoJSON",      ||| fetch, método que faz um aquisição de um link externo com promessas de acept ou reject
+{method: "GET",                                                                                   ||| "GET", pois estamos requirindo um conteudo, não enviando como o POST por exemplo
+headers: {"Content-Type":"application/json",},                                 ||| headers, serve para fazer a confirmação do Acept de uma promessa, se o conteudo foi de fato pego e não deu erro
+})
+.then((resp) => resp.json())                                                                  ||| Then, Então se a requisição foi acept trata a propriedade pega dela e converte com o metodo json() (que simplifica o conteudo pego)
+.then((data) => setCategories(data))                                                  ||| outro Then, para agora pegar o anterior, do método json() que simplificou o conteudo. aqui enviando para a var set do useState
+.catch((error) => console.log(error) )                                                  ||| Catch, serve para se aquisição for reject (não for pega, der erro) fazer uma ação especifica para isso.
+
+
+* todos os métodos Then e Catch usaram uma arrow function, alem de que seus parametros dentro dos (parenteses) são obrigatorios para o funcionamento dos Métodos *
+
+* o ponto . antes dos Then e Catch são porque esses Métodos são ligados ao anterior, nesse caso o primeiro Fetch().then.then.catch , mas podem ser postos na linha de baixo (sem ; no meio em)* 
+
+
+
+
+
+
+
+
+
 
 
 
