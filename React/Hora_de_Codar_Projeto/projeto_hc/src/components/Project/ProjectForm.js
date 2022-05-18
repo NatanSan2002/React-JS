@@ -8,9 +8,13 @@ import style from "./ProjectForm.module.css";
 
 
 
-function ProjectForm({btnText}) {
+function ProjectForm({handleSubmit,btnText, projectData}) {
+
+
 
 const [categories,setCategories] = useState([]);
+const [project,setProject] = useState(projectData || {});
+
 
 useEffect(
     () => {
@@ -27,10 +31,14 @@ useEffect(
         }, [])
 
 
+const submit = function gg (e) {
+e.preventDefault();
+handleSubmit(project);
 
+}
 
 return(
-<form className={style.form}>
+<form  onSubmit={submit} className={style.form}>
     <Input type="text" 
     text="Nome do Projeto:" 
     name="name" 

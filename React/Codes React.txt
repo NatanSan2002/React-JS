@@ -285,7 +285,7 @@ JSON ||| arquivos .json são arquivos de textos que contem informaçoes e dados,
  geralmente com o nome de db, ficando  db.json *
 
 
-{conteudo do JSON} ||| essas chaves são as chaves principais de um arquivo.json 
+{conteudo do JSON} ||| essas chaves são as chaves principais de um arquivo.json , tudo que for dele estará dentro delas.
 
 {"nome_conteudo": conteudo, "nome_conteudo2": conteudo2}   ||| dentro das chaves principais os conteudos são criados dessa maneira, podendo os conteudos serem tmb arrays ou objetos
 
@@ -310,6 +310,15 @@ headers: {"Content-Type":"application/json",},                                 |
 * todos os métodos Then e Catch usaram uma arrow function, alem de que seus parametros dentro dos (parenteses) são obrigatorios para o funcionamento dos Métodos *
 
 * o ponto . antes dos Then e Catch são porque esses Métodos são ligados ao anterior, nesse caso o primeiro Fetch().then.then.catch , mas podem ser postos na linha de baixo (sem ; no meio em)* 
+
+
+useEffect(() => {codigos a serem executados}, [parametros que podem mudar] )  ||| useEffect, serve para limitar a execução do codigo a apenas uma vez. E se caso queremos por parametros que podem
+                                                                                                                                               mudar nessa execução, colocamos dentro do [] que o useEffect verificará se houve uma mudança para atualizar a execução
+
+* um caso de uso do useEffect é o proprio codigo acima de fetch, que se for colocado de forma "pura" fará o react executar a checagem centenas de vezes, então com o useEffect limitamos a apenas uma.*
+
+*os parametros dentro do [] são geralmente valores "variaveis" que queremos por em checagem para ver se teve alteração ou não*
+ 
 
 
 
