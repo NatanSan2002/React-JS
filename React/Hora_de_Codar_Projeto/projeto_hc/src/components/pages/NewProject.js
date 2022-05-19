@@ -28,8 +28,7 @@ function NewProject() {
     return (
     <div className={style.container}>
         <h1>Make Project</h1>
-        <p>Make your project for after add your services </p>
-       
+        <p>Make your project for after add your services </p>      
        <ProjectForm  handleSubmit={createPost}btnText="Criar Projeto"/>
     </div>
     )

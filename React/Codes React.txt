@@ -296,7 +296,8 @@ assim habilitará a visualização concreta dos conteudos daquele arquivo db.jso
 
 depois no terminal dar o comando  npm run  backend   e acessar o link do localhost:numero_porta que foi gerado. *
 
-pegandos os conteudos do JSON em um componente
+
+GET ||| pegandos os conteudos do JSON em um componente
 
 fetch("http://localhost:numero_porta/nome_conteudoJSON",      ||| fetch, método que faz um aquisição de um link externo com promessas de acept ou reject
 {method: "GET",                                                                                   ||| "GET", pois estamos requirindo um conteudo, não enviando como o POST por exemplo
@@ -318,6 +319,21 @@ useEffect(() => {codigos a serem executados}, [parametros que podem mudar] )  ||
 * um caso de uso do useEffect é o proprio codigo acima de fetch, que se for colocado de forma "pura" fará o react executar a checagem centenas de vezes, então com o useEffect limitamos a apenas uma.*
 
 *os parametros dentro do [] são geralmente valores "variaveis" que queremos por em checagem para ver se teve alteração ou não*
+
+
+POST  ||| Postando/enviando informaçoes para o backend JSON
+
+
+fetch("http://localhost:numero_porta/nome_conteudoJSON",      
+{method: "POST",                                                                             ||| POST, pois estamos enviando conteudo para o backend                                                                   
+headers: {"Content-Type":"application/json",},                                 
+body: JSON.stringify(conteudo)                                                      ||| o conteudo enviado para o corpo(body) do arquivo JSON, antes é convertido pelo stringify() para ficar em tipo String e ser lido pelo JSON d boa. 
+})
+.then((resp) => resp.json())                                                                                                                  
+.catch((error) => console.log(error) ) 
+
+
+
  
 
 
