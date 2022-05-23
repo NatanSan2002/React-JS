@@ -202,11 +202,11 @@ e não apenas naquele Componente que pegou e enviou os valores para ela.
 
 Condicional
 
-var &&  (comandos)  ||| Condicional que verifica se tal Var tem algum valor guardado, se tiver executa os codigos dentro do (parenteses)
+var &&  (comandos)  ||| Condicional que verifica se tal Var tem algum valor guardado, se tiver executa os codigos dentro do (parenteses)  (é ternaria essa aq tmb??)
 
 
 
-var  >  2 ?   ( comandos se verdadeira )  : (comandos se falsa )  ||| Se a Condição para a Var for Verdadeira executa os codigos do  (1parenteses) 
+var  >  2 ?   ( comandos se verdadeira )  : (comandos se falsa )  ||| Condição ternaria JS(aceita dentro do JSX), Se a Condição para a Var for Verdadeira executa os codigos do  (1parenteses) 
                                                                                                                   Se a condição for falsa então executa os comandos do (2parenteses)
                                 
 *É obrigatorio ter o (segundo parenteses) de condição falsa*
@@ -321,6 +321,15 @@ useEffect(() => {codigos a serem executados}, [parametros que podem mudar] )  ||
 *os parametros dentro do [] são geralmente valores "variaveis" que queremos por em checagem para ver se teve alteração ou não*
 
 
+
+
+
+
+import {useNavigate} from "react-router-dom"; ||| UseNavigate importação
+
+* atribuir a uma var o comando para ser mais pratico, aqui sera uma const chamada history*
+
+
 POST  ||| Postando/enviando informaçoes para o backend JSON
 
 
@@ -329,8 +338,22 @@ fetch("http://localhost:numero_porta/nome_conteudoJSON",
 headers: {"Content-Type":"application/json",},                                 
 body: JSON.stringify(conteudo)                                                      ||| o conteudo enviado para o corpo(body) do arquivo JSON, antes é convertido pelo stringify() para ficar em tipo String e ser lido pelo JSON d boa. 
 })
-.then((resp) => resp.json())                                                                                                                  
+.then((resp) => resp.json())
+.then((data) => { console.log(data); history("/aba_backend",{message: "Digite mensagem"}) })  ||| useNavigate, manda os dados do fetch e o usuario para a aba_backend do json referida                                                                                                           
 .catch((error) => console.log(error) ) 
+
+
+*se tiver um Select, o value dele não pode ficar vazio, colocar como value={projeto.category ? project.category.id     : ""}  condição ternaria para atribuir ou não o valor da prop do objeto * 
+
+
+
+
+
+
+
+
+
+
 
 
 
