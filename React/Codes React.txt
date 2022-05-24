@@ -50,11 +50,25 @@ import Nome_Da_ImportaçãoCSS from "Localização_do_arquivo.module.css" ||| Im
 <tag className={Nome_Da_ImportaçãoCSS.nomeclass}> </tag> ||| Atribuindo Estilos Da Importação CSS para Elementos Do Componente. (Nesse caso uma Classe) 
 
 
-className={`  ${importacaoCSS[props.ClasseDinamica]  } `}   ||| Método Para Pegar Estilos CSS Especificos para cada conteudo utilizando Props.  (usa `` esses aspas)
+*considere Nome_Importação como styleCSS daqui pra frente
+
+
+className={ styleCSS[Prop_Classe]  }   ||| Pegando Classes Dinamicamente com Props
+
+*Passariamos o nome da Classe que desejamos nesse caso pra prop do Componente, e ela seria aplicada nesse style normalmente
 
 *não esquecer de definir (Prop) nessa Function é obvio
 
-<Componente ClasseDinamica="nome_da_classe" />    ||| Definindo a Prop de Classe para esse Componente
+<Componente Prop_Classe="nome_da_classe" />    ||| Definindo a Prop de Classe para esse Componente
+
+
+className={ ` ${styleCSS.class}  ${styleCSS[Prop_Classe] }  ` }  ||| Método para Pegar Mais de uma classe em um mesmo Elemento (usa esse `` aspas)
+
+*mesmo método de concatenação "rapido" ja conhecido do JS*
+
+
+
+
 
 
 
@@ -210,6 +224,8 @@ var  >  2 ?   ( comandos se verdadeira )  : (comandos se falsa )  ||| Condição
                                                                                                                   Se a condição for falsa então executa os comandos do (2parenteses)
                                 
 *É obrigatorio ter o (segundo parenteses) de condição falsa*
+
+*(Parenteses) São na vdd para o JSX exibir Html, se fosse só JS poderia só colocar o comando sem eles?*
 
 
 
