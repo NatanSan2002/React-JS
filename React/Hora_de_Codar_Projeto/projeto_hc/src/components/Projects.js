@@ -17,7 +17,7 @@ return(
 
 </div>
 )
-/*Atualizar COmandos do Navigate sla oq do novo react-router-dom para funcionar*/ 
+
 }
 
 export default Projects; 
