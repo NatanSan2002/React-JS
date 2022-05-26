@@ -343,7 +343,7 @@ useEffect(() => {codigos a serem executados}, [parametros que podem mudar] )  ||
 
 import {useNavigate} from "react-router-dom"; ||| UseNavigate importação
 
-* atribuir a uma var o comando para ser mais pratico, aqui sera uma const chamada history*
+* atribuir a uma var o comando para ser mais pratico*
 
 
 POST  ||| Postando/enviando informaçoes para o backend JSON
@@ -355,11 +355,18 @@ headers: {"Content-Type":"application/json",},
 body: JSON.stringify(conteudo)                                                      ||| o conteudo enviado para o corpo(body) do arquivo JSON, antes é convertido pelo stringify() para ficar em tipo String e ser lido pelo JSON d boa. 
 })
 .then((resp) => resp.json())
-.then((data) => { console.log(data); history("/aba_backend",{message: "Digite mensagem"}) })  ||| useNavigate, manda os dados do fetch e o usuario para a aba_backend do json referida                                                                                                           
+.then((data) => { console.log(data); useNavigate("/pagina",{ state: {message: "Digite mensagem"} })  ||| useNavigate, navega até a pagina a pagina referida                                                                                                            
 .catch((error) => console.log(error) ) 
 
 
 *se tiver um Select, o value dele não pode ficar vazio, colocar como value={projeto.category ? project.category.id     : ""}  condição ternaria para atribuir ou não o valor da prop do objeto * 
+
+
+useLocation ||| useLocation, serve para ativar alguma função ou uma condição IF, quando ocorrer uma mudança na URL
+
+*import {useLocation} from "react-router-dom";  atribuir a uma var para ser mais pratico. é um método ent const location= useLocation() *
+
+* let message = ""; if(location.state){message = location.state.message;}  ||| nesse exemplo, quando o estado do location fosse ativado por causa da URL a let ia receber a message enviada do fetch*
 
 
 

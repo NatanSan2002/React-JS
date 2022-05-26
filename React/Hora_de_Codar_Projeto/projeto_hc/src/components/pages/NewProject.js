@@ -17,7 +17,8 @@ function NewProject() {
     "Content-type": "application/json"
     },
     body: JSON.stringify(project),
-    }).then((resp) => resp.json )
+    })
+    .then((resp) => resp.json() )
     .then(
         (data) => {console.log(data)
             navigate('/projects', { state: {message: 'Projeto criado com sucesso!'} })}
