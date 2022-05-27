@@ -13,6 +13,13 @@ function Projects() {
 
 const [projects,setProjects] = useState([]);
 
+
+const location = useLocation();
+let message = "";
+if(location.state){
+message = location.state.message;
+}
+
 useEffect(
 () => {fetch("http://localhost:5000/projects",
 {method: "GET",
@@ -22,11 +29,7 @@ headers: {"Content-Type":"application/json"}})
 console.log(data)})
 .catch(error => console.log(error))}, [])
 
-const location = useLocation();
-let message = "";
-if(location.state){
-message = location.state.message;
-}
+
 
 return(
 <div className={style.project_container}>
@@ -36,7 +39,18 @@ return(
 </div>
 {message && (<Message type="success" msg={message}/>)}
 <Container customClass="start">
-    <p>Projetos</p>
+{projects.length > 0 && 
+projects.map((p) => (
+<ProjectCard 
+name={p.name} 
+id={p.id}
+budget={p.budget}
+category={p.category.name}
+key={p.id}
+
+/>
+)
+)}
 </Container>
 </div>
 )

@@ -175,6 +175,17 @@
       "cost": 0,
       "services": [],
       "id": 16
+    },
+    {
+      "name": "Project Create",
+      "budget": "6500",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 17
     }
   ],
   "categories": [
