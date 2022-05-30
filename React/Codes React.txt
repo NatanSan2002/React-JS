@@ -216,7 +216,7 @@ e não apenas naquele Componente que pegou e enviou os valores para ela.
 
 Condicional
 
-var &&  (comandos)  ||| Condicional que verifica se tal Var tem algum valor guardado, se tiver executa os codigos dentro do (parenteses)  
+var &&  (comandos)  ||| Condicional que verifica se tal Var é verdadeira:tem algum valor guardado, se tiver executa os codigos dentro do (parenteses)  
 
 * tambem serve para ver se ela é < menor ou > maior que outra coisa, diferenciando do de baixo que tem que ter uma execução para falso
 

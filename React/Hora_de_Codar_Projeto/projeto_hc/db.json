@@ -186,6 +186,28 @@
       "cost": 0,
       "services": [],
       "id": 17
+    },
+    {
+      "name": "Test Loading",
+      "budget": "7589",
+      "category": {
+        "id": "3",
+        "name": "Desing"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 18
+    },
+    {
+      "name": "Test Loading2",
+      "budget": "6500",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 19
     }
   ],
   "categories": [

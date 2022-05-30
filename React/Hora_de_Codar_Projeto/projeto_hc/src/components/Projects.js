@@ -4,6 +4,7 @@ import { useState,useEffect } from "react"
 
 import style from "./pages/Projects.module.css";
 import Container from "./pages/layout/Container.js";
+import Loading from "./pages/layout/Loading.js";
 import LinkButton from "./pages/layout/LinkButton.js";
 
 import ProjectCard from "./Project/ProjectCard.js";
@@ -13,6 +14,7 @@ function Projects() {
 
 const [projects,setProjects] = useState([]);
 
+const[removeLoading,setRemoveLoading] = useState(false);
 
 const location = useLocation();
 let message = "";
@@ -20,14 +22,16 @@ if(location.state){
 message = location.state.message;
 }
 
-useEffect(
-() => {fetch("http://localhost:5000/projects",
+useEffect(() => {
+setTimeout(() => {
+fetch("http://localhost:5000/projects",
 {method: "GET",
 headers: {"Content-Type":"application/json"}})
 .then( (r) => r.json())
 .then( (data) => {setProjects(data)
+setRemoveLoading(true)
 console.log(data)})
-.catch(error => console.log(error))}, [])
+.catch(error => console.log(error))},300)}, [])
 
 
 
@@ -50,6 +54,10 @@ key={p.id}
 
 />
 )
+)}
+{removeLoading == false && (<Loading/>)}
+{removeLoading && projects.length == 0 && (
+<p>Not have projects yet</p>
 )}
 </Container>
 </div>
