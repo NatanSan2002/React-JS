@@ -377,6 +377,35 @@ useLocation ||| useLocation, serve para ativar alguma função ou uma condição
 
 
 
+DELETE  ||| Deletando Dados do Backend JSON (nesse caso, apenas um array de um objeto com varios )
+
+fetch(`http://localhost:numero_porta/nome_conteudoJSON/${nome_prop}`,{  ||| Local do conteudo(objeto) a ser Excluido com base em uma .Propriedade Unica dele (como um ID). * concatenação de `aspas` `${}` *
+                                                                                                                                                       *apesar de estarmos indo no nome de uma prop, todo o escopo dela (como o seu array) sera deletado 
+method: "DELETE",                                               ||| DELETE, método para Deletar Dados 
+headers:{'Content-Type':'application/json',
+},
+})
+.then((r) => r.json())
+.then((data) => { console.log("conteudo Json que foi excluido"+data)
+setProjects(projects.filter((fil) => fil.nome_prop !== nome_prop  ))    ||| Só o proprio Fetch Delete ja deletaria o conteudo no backend JSON, porem na pag deveria ser feito um Filtro com a atualização dos conteudos
+})
+.catch((erro) => console.log(erro));
+
+
+
+
+
+Efeito de Loading... 
+
+Basta importar uma imagem que se movimente e importa-la quando funçoes de elementos que demoram a responder forem ativadas, como requisiçoes de banco de dados.
+
+Então, usar variaveis UseState para PARAR  a visualização do icon quando o mesmo for carregado, começando com estas recebendo false por exemplo.
+
+Depois que a requisição do banco terminar Setar o Usestate para True, e quando for exibir esse Loading colocar um ternario {UseStateParar == false && ( <Componente_Loading/>)}
+>}
+
+
+
 
 
 
