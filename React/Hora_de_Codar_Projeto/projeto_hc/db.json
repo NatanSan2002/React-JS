@@ -10,6 +10,17 @@
       "cost": 0,
       "services": [],
       "id": 20
+    },
+    {
+      "name": "Project of Edit",
+      "budget": "1500",
+      "category": {
+        "id": "4",
+        "name": "Planejamento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 21
     }
   ],
   "categories": [

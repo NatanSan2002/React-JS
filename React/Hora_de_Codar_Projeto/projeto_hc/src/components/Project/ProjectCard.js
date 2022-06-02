@@ -22,7 +22,7 @@ return (
 <span className={style[category.toLowerCase()]}></span> {category}
 </p>
 <div className={style.project_card_actions}>
-<Link to="/"><BsPencil/> Edit</Link>
+<Link to="/editproject"><BsPencil/> Edit</Link>
 
 <button onClick={remove}>
     <BsFillTrashFill/> Delete

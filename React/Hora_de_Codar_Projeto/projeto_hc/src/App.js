@@ -6,6 +6,7 @@ import Company from "./components/pages/Company";
 import Contact from "./components/pages/Contact";
 import NewProject from "./components/pages/NewProject";
 import Projects from "./components/Projects";
+import EditProject from "./components/pages/EditProject";
 
 import Container from "./components/pages/layout/Container.js";
 import NavBar from "./components/pages/layout/NavBar";
@@ -30,6 +31,8 @@ function App() {
 <Route exact path="/newproject" element={<NewProject/>}/>
 
 <Route path="/projects" element={<Projects/>}/>
+
+<Route path="/editproject" element={<EditProject/>}/>
 </Routes>
 </Container>
 
