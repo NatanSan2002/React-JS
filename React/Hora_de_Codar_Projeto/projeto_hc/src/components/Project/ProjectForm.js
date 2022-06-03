@@ -68,6 +68,8 @@ return(
 <Select name="category_id" text="Select the Category:" options={categories} 
 handleOnChange={handleCategory} 
 value={project.category ? project.category.id : ""} />
+
+
 <SubmitButton text={btnText}/>
 </form>
 )

@@ -32,7 +32,7 @@ function App() {
 
 <Route path="/projects" element={<Projects/>}/>
 
-<Route path="/editproject" element={<EditProject/>}/>
+<Route path="/editproject/:id" element={<EditProject/>}/>
 </Routes>
 </Container>
 

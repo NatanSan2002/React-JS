@@ -245,6 +245,7 @@ import    { BrowserRouter as Router, Routes, Route, Link }   from 'react-router-
 
 <Link to="/nome_para_url " > Conteudo </Link>  |||  Link com nome de Url que sera usado pela tag Router depois
 
+*a Url passada poderia ser {`/nome_para_url/${valor_dinamico}`} para encaminhar para um endereço dinamico de acordo com o valor passado de algum conteudo
 
 * Geralmente usasse esses Links em tags listas mas como são links podem ser aclopados em qualquer tag e conteudo
 
@@ -257,6 +258,7 @@ import    { BrowserRouter as Router, Routes, Route, Link }   from 'react-router-
 
 <Route path="/nome_da_url" element={<Nome_Componente/>}  /> ||| Tag Route, é a responsavel por pegar a url definida do Link (ali em cima) e Transferir para a pagina o Componente 
 
+*Se na URL do Link for definido um ${valor_dinamico}, aqui no Route ficará "/nome_da_url/:qlqnome"   para transferir para uma url dinamica*
 
 * o nome_da_url tem que ser o mesmo da definida no Link *  
 
@@ -407,6 +409,13 @@ Então, usar variaveis UseState para PARAR  a visualização do icon quando o me
 Depois que a requisição do banco terminar Setar o Usestate para True, e quando for exibir esse Loading colocar um ternario {UseStateParar == false && ( <Componente_Loading/>)}
 >}
 
+
+
+{useParams} from "react-router-dom" ||| Importando Params, serve para um pegar valores dinamicos da URL
+
+const {qlqnome} = useParams();  ||| var destruturada para armazenas valor do Params
+
+* esse {qlqnome} é o msm qlqnome definido la no caminho da tag Router "/:qlqnome". Que é uma url com valor dinamico
 
 
 

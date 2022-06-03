@@ -1,30 +1,43 @@
 import style from "./EditProject.module.css";
 
-/*Importar todo o Project Form Ou Não?? */
+import Input from "../form/input.js";
+import Select from "../form/Select.js";
+import SubmitButton from "../form/SubmitButton";
+
+import {useState,useEffect} from "react";
+
+import {useParams} from "react-router-dom";
 
 function EditProject(){
+
+const {id} = useParams(); console.log(id)
+
+const [project,setProject] = useState([]);
+
+
+
+
+useEffect( () => {
+fetch(`http://localhost:5000/projects/${id}`,{
+method: "GET",headers:{"Content-Type": "application/json"}
+}).then( (r) => r.json() )
+.then( (d) =>  {setProject(d)
+console.log(d)
+}).catch(erro => console.log(erro))},[id]
+)
+
+/*colocar efeito de loading*/
+
+
+
+
+
+
 return(
 <div className={style.principal}>
-<h1>Editar Projeto</h1>
-
-<div className={style.edit_div}>
-<div className={style.adjust}>
-<section>
-<p>Name Of Project:</p>
-<input type="text" placeholder="Edit Name of Project"></input>
-</section>
-<section>
-<p>Orçamento Of Project:</p>
-<input type="number" placeholder="Chose the Orçamento"></input>
-</section>
-<section>
-<p>Name Of Project:</p>
-<input type="text" placeholder="Edit Name of Project"></input>
-</section>
+<p>Projeto de id: {id}</p>
 </div>
 
-</div>
-</div>
 )
 }
 

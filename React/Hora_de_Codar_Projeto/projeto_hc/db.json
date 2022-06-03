@@ -21,6 +21,17 @@
       "cost": 0,
       "services": [],
       "id": 21
+    },
+    {
+      "name": "One More",
+      "budget": "4000",
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 22
     }
   ],
   "categories": [

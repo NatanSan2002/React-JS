@@ -1,28 +1,6 @@
 .principal{
-font-family: Arial, Helvetica, sans-serif;
-background:grey;
-color:white;
-width:1000px;
-margin:25px auto;
-padding:50px 10px 0px 10px;
-border-radius:10px;
-border-bottom:5px solid black;
-border-right:5px solid black;
-box-shadow:0px 2px 4px rgba(0, 0, 0, 0.288);
 
 }
-
-.principal h1 {font-size:2em; background: black; color:white;text-align: center;}
-
-.edit_div{background:white;color:black; height:650px; width:600px; margin:auto; padding:15px;}
-
-.edit_div section{margin:auto; margin-bottom: 25px; font-size:1.1em;}
-
-.edit_div input{border:none; font-size: 0.8em; margin:4px; padding:2px;}
-
-.edit_div section p {font-weight:bold;}
-
-.adjust{width:60%; height:100%; margin:auto;text-align: left;}
 
 
 
