@@ -92,6 +92,10 @@ em que a busca esta sendo feita, colocando: ./  exemplo: ./pasta_mesmo_local/arq
 
 <Nome_Da_Importação>  Codigos HTML </Nome_Da_Importação>  ||| Utilização De Importaçao, sintaxe de tag obrigatorio quando outras tags html estarão dentro do Componente
 
+* Se esse Componente tiver tags dentro dele, isto é: tags filhas, esse Componente tem que ter uma prop.children no return JSX dele para indicar isso
+
+exemplo: function nomeF (props) { return (  <div>  props.children </div>  )}   ai as tags filhas ficaram onde a props.children foi colocada *
+
 
 Para criar um Componente(Um arquivo diferente com codigos próprios)  basta criar um arquivo.formato (exemplo .js)
 
@@ -124,7 +128,6 @@ function nomeF(propriedades) {return (<div> propriedades.valor1   propriedades.v
 
 function nomeF( { valor1, valor2, valor3 } ) {return (<div> {valor1} {valor2} {valor3}  </div>)}  ||| Método Simplificado Para Declaração de Propriedades
 
-function nomeF (props) { return (  <div>  props.children </div>  )}  ||| Props.Children, especifica que as Props definidas serão utilizadas em todas as Tags de dentro do Componente
 
 
 
