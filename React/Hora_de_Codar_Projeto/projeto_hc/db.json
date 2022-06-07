@@ -12,11 +12,11 @@
       "id": 20
     },
     {
-      "name": "Project of Edit",
-      "budget": "1500",
+      "name": "Project Atualizado",
+      "budget": "1124",
       "category": {
-        "id": "4",
-        "name": "Planejamento"
+        "id": "3",
+        "name": "Desing"
       },
       "cost": 0,
       "services": [],

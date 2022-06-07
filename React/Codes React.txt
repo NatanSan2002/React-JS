@@ -402,6 +402,18 @@ setProjects(projects.filter((fil) => fil.nome_prop !== nome_prop  ))    ||| Só 
 
 
 
+PATCH ||| Alterando dados ja existentes do Backend JSON 
+
+fetch(`http://localhost:numero_porta/nome_conteudoJSON/${nome_prop}`, { *apesar de estarmos indo no nome de uma prop, todo o escopo dela (como o seu array) sera mudado*
+method: "PATCH", headers: {"Content-Type":"application/json"},      |||  PATCH, Atualiza conteudo apenas no local especificado no http
+
+body: JSON.stringify(conteudo)          |||   o conteudo enviado para o corpo(body) do arquivo JSON, antes é convertido pelo stringify() para ficar em tipo String e ser lido pelo JSON d boa.
+})
+
+
+
+
+
 
 Efeito de Loading... 
 
