@@ -28,3 +28,18 @@ width:350px;
 margin: 2em 0;
 }
 
+@media(max-width:349px){
+    .home_container img {
+        width:283px;}
+}
+
+@media(max-width:284px){
+    .home_container img {
+        width:200px;}
+}
+
+@media(max-width:201px){
+    .home_container img {
+        width:150px;}
+}
+

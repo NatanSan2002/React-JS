@@ -9,6 +9,7 @@ padding: 1em;
 display:flex;
 list-style:none;
 align-items:center;
+flex-wrap: wrap;
 }
 
 .iten{
@@ -22,4 +23,10 @@ text-decoration: none;
 
 .iten a:hover{
 color:#FFBB33;
+}
+
+img{margin-right:50px;}
+
+@media(max-width:444px){
+img{margin-right:10px;}
 }

@@ -11,3 +11,10 @@ margin-bottom:0.5em;
 .container p {
 color:#7b7b7b;
 }
+
+@media(max-width:271px){
+.container{padding:0 0 0 1em;}
+}
+
+
+    

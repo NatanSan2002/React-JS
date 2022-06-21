@@ -32,6 +32,17 @@
       "cost": 0,
       "services": [],
       "id": 22
+    },
+    {
+      "name": "Test",
+      "budget": "2500",
+      "category": {
+        "id": "2",
+        "name": "Desenvolvimento"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 23
     }
   ],
   "categories": [
