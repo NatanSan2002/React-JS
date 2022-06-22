@@ -1,8 +1,17 @@
 .project_container{
 padding:2em;
+margin-left: auto;margin-right: auto;
+display:block;
 }
 
 .title_container{
 display:flex; justify-content: space-between;
 margin-bottom:2em;
+}
+
+
+@media(max-width:301px){
+  .project_container{
+padding:0.1em;
+  }  
 }

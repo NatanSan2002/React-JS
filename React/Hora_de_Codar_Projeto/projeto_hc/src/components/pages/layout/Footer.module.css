@@ -32,3 +32,9 @@ margin-top:2em;
 font-weight:bold;
 color:#ffbb33;
 }
+
+footer a {
+text-decoration: none;
+box-shadow: none;
+color:#ffbb33;
+}

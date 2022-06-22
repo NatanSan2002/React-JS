@@ -5,6 +5,7 @@ color:black;
 border:solid 1px #7a7a7a;
 border-radius:5px;
 width:24%;
+box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.171);
 }
 
 .project_card h4 {
@@ -84,3 +85,26 @@ background:#222; color:#FFBB33;
 }
 
 
+@media(max-width:1010px){
+.project_card{
+width:30%;
+}
+}
+
+@media(max-width:1010px){
+    .project_card{
+    width:45%;
+    margin-left: auto;margin-right:auto;
+    display:block;
+    }
+    }
+
+    @media(max-width:558px){
+        .project_card{
+        width:100%;
+        margin-bottom:10px;
+        }
+    }
+
+    
+    

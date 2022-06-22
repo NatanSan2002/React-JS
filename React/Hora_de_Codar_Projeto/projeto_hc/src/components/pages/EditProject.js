@@ -103,22 +103,8 @@ show == false ? "Editar Projeto" : "Ocultar Projeto"}</button>
 <ProjectForm handleSubmit={editPost} projectData={project} btnText="Salvar Alteraçoes"/>
 </div>)}
 </div>
-<div className={style.service_form_container}>
-  <h2>Adicione um Serviço:</h2>
-  <button className={style.btn} onClick={toggleServiceForm}>
-    {!showServiceForm ? "Adicionar Serviço" : "Close"}</button>
-    <div className={style.project_info}>
-      {showServiceForm && (
-      <div> 
-        Formulário do Serviço
-      </div>
-      )}
-    </div>
-</div>
-<h2>Serviços</h2>
-<Container customClass="start">
-  <p>Itens Serviços</p>
-</Container>
+
+
 </Container>
 </div>
     
