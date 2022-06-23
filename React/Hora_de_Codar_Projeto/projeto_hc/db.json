@@ -109,6 +109,17 @@
       "cost": 0,
       "services": [],
       "id": 29
+    },
+    {
+      "name": "DFA",
+      "budget": "5899",
+      "category": {
+        "id": "3",
+        "name": "Desing"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 30
     }
   ],
   "categories": [
