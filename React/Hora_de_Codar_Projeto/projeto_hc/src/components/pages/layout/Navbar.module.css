@@ -30,3 +30,34 @@ img{margin-right:50px;}
 @media(max-width:444px){
 img{margin-right:10px;}
 }
+
+@media(max-width:574px){
+.iten a {
+background:white;
+color:black;
+padding:7px 8px 7px 8px;
+border-radius: 8px;
+}
+}
+
+@media(max-width:507px){
+img{
+margin-bottom:12px;
+}
+}
+
+@media(max-width:393px){
+.list, .navbar{
+display:block;
+}
+.iten a {
+display:block;
+margin:5px 0px 5px 0px;
+}
+}
+
+@media(max-width:209px){
+.navbar{
+padding-right:0px; padding-left:5px;
+}
+}

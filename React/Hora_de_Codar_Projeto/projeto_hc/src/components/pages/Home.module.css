@@ -43,3 +43,9 @@ margin: 2em 0;
         width:150px;}
 }
 
+@media(max-width:341px){
+.home_container h1{
+font-size:2rem;
+}
+}
+

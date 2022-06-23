@@ -107,4 +107,13 @@ width:30%;
     }
 
     
+    @media(max-width:237px){
+         .project_card_actions a, .project_card_actions button{
+            margin-top:1.2em;
+            display:block;
+            align-items:center;
+            }
+
+    }
+
     
