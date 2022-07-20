@@ -1,3 +1,9 @@
+
+Por favor desconsidere as provaveis gafes de denifição contidas aqui, uso elas apenas para "fast check" sobre cada comando e sua sintaxe, quando quero uma informação mais detalhada e certa, geralmente busco em sites especializados para isso, como o "W3Schools".
+
+
+
+
 Codigos no Terminal (na pasta principal do projeto, onde estão todas as pastas e arquivos)
 
 
