@@ -441,11 +441,21 @@ const {qlqnome} = useParams();  ||| var destruturada para armazenas valor do Par
 
 
 
+FUNÇOES MUITO USADAS: 
+
+MAP ||| Array.map( (iten) => 
+<Componente prop1={iten.p1} prop2={iten.p2} />   ||| Executa uma ação com cada vetor do array (iten pode ser dado qualquer nome)
+)
 
 
+FILTER ||| var Array_Filtrado =  array.filter( (iten) =>
+iten.includes("R$")   || iten.price > 200 ? true : false           ||| Faz um array filtrado só com os vetores que retornaram TRUE na execução (esse array tem que ser guardado em uma var)
+)
 
  
-
+REPLACE ||| Array.map( (iten) => 
+iten.price = iten.price.replace("R$", "")                      ||| Modifica certo valor por outro (nesse caso nada), tambem deve ser atribuido a mesma variavel o novo valor 
+)
 
 
 

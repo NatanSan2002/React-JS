@@ -1,0 +1,35 @@
+
+
+.container{
+background:rgb(156, 190, 206);
+width: 230px;
+height: 223px;
+color: white;
+padding: 1% 13px;
+margin: 1%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+align-items: center;
+text-align: center;
+}
+
+.container .name{
+margin: 0 auto;
+width: 50%;
+}
+
+.container .carac {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 80%;
+}
+
+.container .raro {
+background:red;
+}
+
+.container .normal{
+    background:blue;
+}
