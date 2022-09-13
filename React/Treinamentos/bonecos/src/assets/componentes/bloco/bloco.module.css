@@ -12,6 +12,8 @@ flex-direction: column;
 justify-content: space-around;
 align-items: center;
 text-align: center;
+overflow: hidden;
+font-size: 14px;
 }
 
 .container .name{
@@ -32,4 +34,8 @@ background:red;
 
 .container .normal{
     background:blue;
+}
+
+.container > img {
+width: 150px;
 }

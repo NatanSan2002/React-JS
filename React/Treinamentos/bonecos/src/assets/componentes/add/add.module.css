@@ -1,0 +1,58 @@
+.container{
+padding:5% 10%;
+margin: 4% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    color: white;
+}
+
+.container > .tl{
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.container > button{
+    margin: 2% 0;
+    width: 93px;
+    height: 42px;
+    font-size: 27px;
+}
+
+.container > .flex{
+display: flex;
+    flex-direction: row;
+    justify-content: center;
+width: 100%;
+
+}
+
+.container > .flex  input{
+    margin: 1%;
+    width: 80px;
+    background: none;
+    border-style: none;
+    border-bottom: 1px solid #fff;
+    color: #fff;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 0 0 0 auto;
+    outline: 0;
+    
+    }
+
+    .container > .flex > div{
+        width: 178px;
+        margin: 0 3%;
+        
+        
+        }
+
+        .container > .flex > div > div{
+            display: flex;
+    align-items: flex-end;
+            }

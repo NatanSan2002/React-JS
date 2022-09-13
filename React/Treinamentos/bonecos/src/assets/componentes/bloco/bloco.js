@@ -1,6 +1,8 @@
 import style from "./bloco.module.css";
 
-function Bloco ({name,ano,raridade,price}) {
+function Bloco ({name,ano,raridade,price,img}) {
+
+
 
      var r = raridade.toLowerCase();
 return(
@@ -13,6 +15,8 @@ return(
 <p>Raridade: {raridade}</p>
 
 </div>
+
+{img && (<img src={require("../../imgs/bonecos/"+img)} alt="Imagem Do Boneco"/>)}
 
 <p className={style.price}>{price}R$</p>
 
