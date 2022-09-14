@@ -1,4 +1,4 @@
-import Bloco from "./assets/componentes/bloco/bloco.js";
+
 import Container from "./assets/componentes/container/container.js";
 import Add from "./assets/componentes/add/add.js";
 

@@ -168,6 +168,10 @@ functionN (e) {e.preventDefault( )} ||| Cancela Açoes tipo SUBMIT, permanecendo
 
 * "e" do parametro pode ser dado qualquer nome
 
+* Se a função tiver mais parametros doq só o do "event" o "event" tem que ser o primeiro, e quando ela for chamada tem ter uma arrow function antes para pegar o evento e passar por parametros
+
+ onClick={ (event) => functionN(event,p1,p2,p3,p4) }
+
 
 
 
