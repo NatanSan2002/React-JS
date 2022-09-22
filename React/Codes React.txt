@@ -14,6 +14,8 @@ npm install json-server                            ||| Instalar Json Server, par
 npm install uuid                                       ||| Instalar uuid, serve para diferenciar por ID nossos projetos no banco de dados
 
 
+npm install ||| Instala todas as depedencias de um projeto (quando baixa-mos em outra maquina sem o node_modules)
+
 npm start      ||| Abrir aba do site pelo localhost
 
 
