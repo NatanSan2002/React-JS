@@ -20,6 +20,18 @@ npm start      ||| Abrir aba do site pelo localhost
 
 
 
+npm create vite@latest ||| Criação do Projeto via VITE
+
+*depois das escolhas do Vite, dar um NPM install para instalar os requisitos 
+
+npm run dev ||| Abrir projeto pelo localhost com o VITE
+
+* arquivos .js e .jsx são a mesma coisa mas é melhor manter o mesmo padrão no projeto todo
+
+
+
+
+
 
 
 App.js
