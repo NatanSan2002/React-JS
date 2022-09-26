@@ -65,7 +65,11 @@ arquivo "index.css" é o arquivo que por padrão é importado pelo "index.js", a
 
 import Nome_Da_ImportaçãoCSS from "Localização_do_arquivo.module.css" ||| Importação De estilo CSS para um Componente, que aonde for utilizado ira usar esse estilo importado
 
-*o  .module  no nome do arquivo CSS é obrigatorio para funcionar o estilo *
+*o  .module  no nome do arquivo CSS é obrigatorio para funcionar o estilo com classes*
+
+*Se for um estilo não atrelado a um só componente próprio,o mesmo não pode ter o .module e tem que importa-lo sem nome, ai sim ele vai poder estilizar as classes.
+
+
 
 <tag className={Nome_Da_ImportaçãoCSS.nomeclass}> </tag> ||| Atribuindo Estilos Da Importação CSS para Elementos Do Componente. (Nesse caso uma Classe) 
 
@@ -377,7 +381,7 @@ useEffect(() => {codigos a serem executados}, [parametros que podem mudar] )  ||
 
 import {useNavigate} from "react-router-dom"; ||| UseNavigate importação
 
-* atribuir a uma var o comando para ser mais pratico*
+* atribuir a uma var const o useNavigate  se não não funciona*
 
 
 POST  ||| Postando/enviando informaçoes para o backend JSON
@@ -398,7 +402,7 @@ body: JSON.stringify(conteudo)                                                  
 
 useLocation ||| useLocation, serve para ativar alguma função ou uma condição IF, quando ocorrer uma mudança na URL
 
-*import {useLocation} from "react-router-dom";  atribuir a uma var para ser mais pratico. é um método ent const location= useLocation() *
+*import {useLocation} from "react-router-dom";  atribuir a uma var const, se não não funciona.
 
 * let message = ""; if(location.state){message = location.state.message;}  ||| nesse exemplo, quando o estado do location fosse ativado por causa da URL a let ia receber a message enviada do fetch*
 
@@ -462,9 +466,10 @@ const {qlqnome} = useParams();  ||| var destruturada para armazenas valor do Par
 FUNÇOES MUITO USADAS: 
 
 MAP ||| Array.map( (iten) => 
-<Componente prop1={iten.p1} prop2={iten.p2} />   ||| Executa uma ação com cada vetor do array (iten pode ser dado qualquer nome)
+<Componente key={iten.id} prop1={iten.p1} prop2={iten.p2} />   ||| Executa uma ação com cada vetor do array (iten pode ser dado qualquer nome)
 )
 
+*key é aconselhavel, ai pega o id que é unico em cada vetor
 
 FILTER ||| var Array_Filtrado =  array.filter( (iten) =>
 iten.includes("R$")   || iten.price > 200 ? true : false           ||| Faz um array filtrado só com os vetores que retornaram TRUE na execução (esse array tem que ser guardado em uma var)
@@ -472,9 +477,11 @@ iten.includes("R$")   || iten.price > 200 ? true : false           ||| Faz um ar
 
  
 REPLACE ||| Array.map( (iten) => 
-iten.price = iten.price.replace("R$", "")                      ||| Modifica certo valor por outro (nesse caso nada), tambem deve ser atribuido a mesma variavel o novo valor 
+iten.price = iten.price.replace("R$", "")                      ||| Modifica certo valor por outro (nesse caso nada), tambem deve ser atribuido a mesma variavel o novo valor se quiser substitui-lo
 )
 
+
+var_string.replaceAll("R$", "outra coisa")  ||| Modifca Todos os caracteries que tiverem
 
 
 
