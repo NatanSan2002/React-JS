@@ -276,6 +276,8 @@ import    { BrowserRouter as Router, Routes, Route, Link }   from 'react-router-
 
 <Link to="/nome_para_url " > Conteudo </Link>  |||  Link com nome de Url que sera usado pela tag Router depois
 
+* Se a URL preservar o local anterior exemplo: /localtal/localatual , no "to=" é sem a "/" no começo
+
 *a Url passada poderia ser {`/nome_para_url/${valor_dinamico}`} para encaminhar para um endereço dinamico de acordo com o valor passado de algum conteudo
 
 * Geralmente usasse esses Links em tags listas mas como são links podem ser aclopados em qualquer tag e conteudo
@@ -351,6 +353,18 @@ assim habilitará a visualização concreta dos conteudos daquele arquivo db.jso
 depois no terminal dar o comando  npm run  backend   e acessar o link do localhost:numero_porta que foi gerado. *
 
 
+JSON.parse(arrayJSON)  ||| converte Array JSON em um array padrão, para poder ser usado mais facilmente
+
+
+FETCH 
+
+await fetch (endereco); ||| Fetch Get, se for Get, Fetch pode ser usado só com essa sintaxe simplificada
+
+* quando o fetch é usado "solto" é necessario o "await" antes dele e de todas as variaveis que pegam esse fetch tmb, e se estiver dentro de uma função ela tem que ser "async" 
+
+* endereco é o local onde ele vai estar buscando as informaçoes, pode ser uma URL de uma API, banco de dados local etc...
+
+
 GET ||| pegandos os conteudos do JSON em um componente
 
 fetch("http://localhost:numero_porta/nome_conteudoJSON",      ||| fetch, método que faz um aquisição de um link externo com promessas de acept ou reject
@@ -381,7 +395,7 @@ useEffect(() => {codigos a serem executados}, [parametros que podem mudar] )  ||
 
 import {useNavigate} from "react-router-dom"; ||| UseNavigate importação
 
-* atribuir a uma var const o useNavigate  se não não funciona*
+* atribuir a uma var const o useNavigate,  se não, não funciona*
 
 
 POST  ||| Postando/enviando informaçoes para o backend JSON
@@ -439,6 +453,13 @@ body: JSON.stringify(conteudo)          |||   o conteudo enviado para o corpo(bo
 })
 
 
+API 
+
+
+import.meta.env.variavel_Senha; ||| Importando variaveis de informações sensiveis da API, que ficam no arquivo .env 
+
+*se tiver usando VITE tem que colocar "VITE_" no começo da variavel 
+
 
 
 
@@ -459,6 +480,15 @@ Depois que a requisição do banco terminar Setar o Usestate para True, e quando
 const {qlqnome} = useParams();  ||| var destruturada para armazenas valor do Params
 
 * esse {qlqnome} é o msm qlqnome definido la no caminho da tag Router "/:qlqnome". Que é uma url com valor dinamico
+
+
+import {useSearchParams} from "react-router-dom"; ||| useSearchParams, serve para pegar um valor especifico da URL
+
+*exemplo http://site/nomepag?valor=conteudo
+
+const [nomevar] = useSearchParams() ||| var destruturada para armazenar valor pego 
+
+nomevar.get("valor")  ||| Pega o tal valor da URL  
 
 
 
