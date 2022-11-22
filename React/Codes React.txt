@@ -56,6 +56,8 @@ classes no html aqui são atribuidas como: className="nome_classe"
 *o html "puro" é o arquivo index.html na pasta public, ele que tem as configuraçoes de <head> para mudar o title ou importar fontes por HTML por exemplo
 
 
+<img src={require('./logo.jpeg')} /> ||| Método pera pegar uma imagem em React sem precisar importa-la
+
 
 
 
