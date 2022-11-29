@@ -256,7 +256,7 @@ const var_referido = useRef(null); ||| Criando Variavel do useRef
 <div ref={var_referido} > conteudos</div> ||| Atributo Ref do elemento que sera armazenado na var: var_referido
 
 
-*console.log(var_referido) Ai essa variavel contem o elemento pego pelo ref, assim podemos pegar informações dela, alterar etc...
+*console.log(var_referido.current) Ai essa variavel contem o elemento pego pelo ref, assim podemos pegar informações dela, alterar etc...
 
 
 
