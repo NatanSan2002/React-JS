@@ -291,7 +291,7 @@ npm install react-router-dom    |||   (No Terminal principal da aplicação) Ins
 import    { BrowserRouter as Router, Routes, Route, Link }   from 'react-router-dom'    |||  Principais Importaçoes no Componente para o React Router
 
 
-<Router> Codigos </Router>      ||| Tag Principal do Router, onde ficara todos os seus Componentes especificos
+<Router> Codigos </Router>      ||| Tag Principal do Router, onde ficara todos os seus Componentes especificos (incluindo o Link)
 
 <Link to="/nome_para_url " > Conteudo </Link>  |||  Link com nome de Url que sera usado pela tag Router depois
 
