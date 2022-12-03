@@ -525,9 +525,11 @@ iten.includes("R$")   || iten.price > 200 ? true : false           ||| Faz um ar
 )
 
  
-REPLACE ||| Array.map( (iten) => 
+REPLACE ||| const NovoArray = Array.map( (iten) => 
 iten.price = iten.price.replace("R$", "")                      ||| Modifica certo valor por outro (nesse caso nada), tambem deve ser atribuido a mesma variavel o novo valor se quiser substitui-lo
 )
+
+* O Array original não é modificado em nada, por isso o "NovoArray" recebe =  a execução do .map com os novos valores
 
 
 var_string.replaceAll("R$", "outra coisa")  ||| Modifca Todos os caracteries que tiverem
