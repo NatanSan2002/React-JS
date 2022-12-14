@@ -58,6 +58,8 @@ classes no html aqui são atribuidas como: className="nome_classe"
 
 <img src={require('./logo.jpeg')} /> ||| Método pera pegar uma imagem em React sem precisar importa-la
 
+*por algum motivo o metodo require não aceita variaveis, tem que ser a string "pura"
+
 
 
 
