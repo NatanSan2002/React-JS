@@ -223,7 +223,7 @@ não podendo ser alterada diretamente nela(como uma const mesmo). (Ambas podem t
 alteração o onChange com useState é disparado, fazendo aquela const "Setvar" de useState pegar o valor e ja atribui a outra var 
 "gemea " onde armazena e sera utlizida o valor de fato. * 
 
-*(e) do parametro da Arrow Function pode ser substituido por qualquer nome*    
+*(e) do parametro da Arrow Function pode ser substituido por qualquer nome, e tem que ter essa arrow function para não dar loop infinito*    
 
 
 
@@ -407,7 +407,7 @@ useEffect(() => {codigos a serem executados}, [parametros que podem mudar] )  ||
 
 * um caso de uso do useEffect é o proprio codigo acima de fetch, que se for colocado de forma "pura" fará o react executar a checagem centenas de vezes, então com o useEffect limitamos a apenas uma.*
 
-*os parametros dentro do [] são geralmente valores "variaveis" que queremos por em checagem para ver se teve alteração ou não*
+*os parametros dentro do [] são geralmente valores "variaveis" que queremos por em checagem para ver se teve alteração ou não13:15 17/12/2022*
 
 
 
