@@ -194,6 +194,8 @@ functionN (e) {e.preventDefault( )} ||| Cancela Açoes tipo SUBMIT, permanecendo
 
  onClick={ (event) => functionN(event,p1,p2,p3,p4) }
 
+*Se for só alterar a var do UseState() por exemplo é recomendado coloca-lo dentro de uma arrow function, mas tem casos como em uma função normal, que não deve ser posto dentro de uma arrow function
+
 
 
 
