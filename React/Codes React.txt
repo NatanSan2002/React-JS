@@ -184,7 +184,7 @@ NomeFuncao.defaultProps =  { valor1: conteudo, valor2: conteudo}   ||| Valores D
 Eventos
 
 function EventoN () {Execuçoes do Evento};  <button onClick= {EventoN} > botão  </button>  ||| Chamando uma Função de Evento em um Onlick
-
+ 
 
 functionN (e) {e.preventDefault( )} ||| Cancela Açoes tipo SUBMIT, permanecendo na pag e continuando codigos da Função 
 
