@@ -409,7 +409,7 @@ useEffect(() => {codigos a serem executados}, [parametros que podem mudar] )  ||
 
 * um caso de uso do useEffect é o proprio codigo acima de fetch, que se for colocado de forma "pura" fará o react executar a checagem centenas de vezes, então com o useEffect limitamos a apenas uma.*
 
-*os parametros dentro do [] são geralmente valores "variaveis" que queremos por em checagem para ver se teve alteração ou não13:15 17/12/2022*
+*os parametros dentro do [] são geralmente valores "variaveis" que queremos por em checagem para ver se teve alteração ou não
 
 
 
